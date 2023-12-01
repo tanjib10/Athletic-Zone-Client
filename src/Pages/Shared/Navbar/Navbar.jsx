@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
 import Swal from "sweetalert2";
+// import Banner from "../../Home/Banner/Banner";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -79,7 +80,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-[#31304D] text-white ">
+      <div className="navbar bg-[#31304D] text-white bg-opacity-90">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

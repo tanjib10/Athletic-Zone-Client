@@ -67,11 +67,13 @@ const Login = () => {
       });
   };
   return (
-    <div className="my-16" data-aos="fade-up">
+    <div>
       <Helmet>
         <title>Athletic Zone | Login</title>
       </Helmet>
-      <h3 className="text-center text-2xl font-bold mb-4">Please Login Here</h3>
+      <h3 className="text-center text-2xl font-bold mt-8 mb-4">
+        Please Login Here
+      </h3>
       <div className="hero min-h-screen">
         <div className="flex justify-between">
           <div className="w-1/2">
