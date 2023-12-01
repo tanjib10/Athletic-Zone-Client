@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useContext } from "react";
 import loginImg from "../../assets/4957136_4957136.jpg";
 import { AuthContext } from "../Shared/Provider/AuthProvider";
@@ -6,16 +7,26 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
-
+  const axiosPublic = useAxiosPublic();
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
-      .then(() => {
+      .then((result) => {
+        //add info in db
+        const userInfo = {
+          email: result.user?.email,
+          name: result.user?.displayName,
+          role: "member",
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          console.log(res.data);
+        });
         Swal.fire({
           icon: "success",
           title: "Login Successful",
