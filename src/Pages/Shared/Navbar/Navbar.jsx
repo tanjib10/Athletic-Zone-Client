@@ -16,15 +16,16 @@ const Navbar = () => {
       })
       .catch();
   };
+  console.log(user);
   const navLinks = (
     <>
       <li className="pr-4">
         <NavLink
           className={({ isActive, isPending }) =>
             isPending
-              ? "pending px-2 text-xl"
+              ? "pending text-xl"
               : isActive
-              ? "active px-2 text-xl underline"
+              ? "active text-xl underline"
               : ""
           }
           to="/"
@@ -37,9 +38,9 @@ const Navbar = () => {
           to="/gallery"
           className={({ isActive, isPending }) =>
             isPending
-              ? "pending px-2 text-xl"
+              ? "pending  text-xl"
               : isActive
-              ? "active px-2 text-xl underline"
+              ? "active text-xl underline"
               : ""
           }
         >
@@ -51,9 +52,9 @@ const Navbar = () => {
           to="/trainer"
           className={({ isActive, isPending }) =>
             isPending
-              ? "pending px-2 text-xl"
+              ? "pending  text-xl"
               : isActive
-              ? "active px-2 text-xl underline"
+              ? "active text-xl underline"
               : ""
           }
         >
@@ -116,7 +117,6 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center justify-center gap-2">
-              <p className="text-green-800">{user.displayName}</p>
               <img className="w-8 rounded-full" src={user.photoURL} alt="" />
             </div>
           ) : (
