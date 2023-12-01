@@ -3,8 +3,11 @@ import img from "../../assets/20824341_6368592.jpg";
 import { AuthContext } from "../Shared/Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 const Register = () => {
+  const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
   const { createUser } = useContext(AuthContext);
   const [passwordError, setPasswordError] = useState("");
   const handleRegister = (e) => {
@@ -29,10 +32,22 @@ const Register = () => {
     createUser(email, password)
       .then((res) => {
         console.log(res);
-        Swal.fire({
-          icon: "success",
-          title: "Registration Successful",
-          text: "You have been successfully registered!",
+        //create entry in db
+        const userInfo = {
+          role: "member",
+          name: name,
+          email: email,
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          if (res.data.insertedId) {
+            console.log("added to db");
+            Swal.fire({
+              icon: "success",
+              title: "Registration Successful",
+              text: "You have been successfully registered!",
+            });
+            navigate("/");
+          }
         });
       })
       .catch((error) => {
