@@ -10,8 +10,10 @@ const Featured = () => {
   console.log(data);
   return (
     <div className="my-16">
-      <h3 className="text-center text-3xl font-bold mb-10">Our Features</h3>
-      <div className="ml-0 lg:ml-14 grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <h3 className="text-center text-[#31304D] text-4xl font-bold mb-10">
+        Our Features
+      </h3>
+      <div className="ml-20 lg:ml-14 grid grid-cols-1 lg:grid-cols-3 gap-4">
         {data.map((item) => (
           <div key={item.id}>
             <div className="card w-64 h-80 bg-base-100 shadow-xl">
@@ -20,7 +22,7 @@ const Featured = () => {
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">{item.title}</h2>
-                <h2>{item.description}</h2>
+                <h2 className="text-sm">{item.description}</h2>
                 <p></p>
               </div>
             </div>
