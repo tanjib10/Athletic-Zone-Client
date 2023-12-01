@@ -17,7 +17,8 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.1",
     "react-router-dom": "^6.20.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.10.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

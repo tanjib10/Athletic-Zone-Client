@@ -1,0 +1,146 @@
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { useContext } from "react";
+import Swal from "sweetalert2";
+
+const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Logged Out",
+          text: "You have been successfully logged out!",
+        });
+      })
+      .catch();
+  };
+  const navLinks = (
+    <>
+      <li className="pr-4">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending px-2 text-xl"
+              : isActive
+              ? "active px-2 text-xl underline"
+              : ""
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className="pr-4">
+        <NavLink
+          to="/gallery"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending px-2 text-xl"
+              : isActive
+              ? "active px-2 text-xl underline"
+              : ""
+          }
+        >
+          Gallery
+        </NavLink>
+      </li>
+      <li className="pr-4">
+        <NavLink
+          to="/trainer"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending px-2 text-xl"
+              : isActive
+              ? "active px-2 text-xl underline"
+              : ""
+          }
+        >
+          Trainer
+        </NavLink>
+      </li>
+      <li className="pr-4">
+        <NavLink
+          to="/classes"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl  underline"
+              : ""
+          }
+        >
+          Classes
+        </NavLink>
+      </li>
+    </>
+  );
+  return (
+    <div>
+      <div className="navbar bg-[#31304D] text-white ">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              {navLinks}
+            </ul>
+          </div>
+          <Link to="/" className="btn btn-ghost text-xl">
+            <img
+              className="w-4 lg:w-8"
+              src="../../../../public/28542127_7459344.jpg"
+              alt=""
+            />
+            Athletic Zone
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className=" menu-horizontal">{navLinks}</ul>
+        </div>
+        <div className="navbar-end">
+          {user ? (
+            <div className="flex items-center justify-center gap-2">
+              <p className="text-white">{user.displayName}</p>
+              <img className="w-8" src={user.photoURL} alt="" />
+            </div>
+          ) : (
+            ""
+          )}
+
+          {user ? (
+            <button
+              onClick={handleSignOut}
+              className="text-xl font-semibold btn btn-ghost text-white"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="text-xl font-semibold btn btn-ghost text-white">
+                Login
+              </button>
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
