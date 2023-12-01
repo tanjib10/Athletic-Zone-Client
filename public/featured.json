@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Cardio Boost",
+    "description": "Elevate your heart rate with our high-intensity cardio workouts.",
+    "imageSrc": "https://i.ibb.co/THf4Vzg/portrait-young-beautiful-sportive-girl-white-background.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Strength Fusion",
+    "description": "Build strength and tone your muscles with our strength fusion sessions.",
+    "imageSrc": "https://i.ibb.co/FKsdT2j/athletic-man-woman-with-dumbbells.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Yoga Harmony",
+    "description": "Find balance and flexibility with our yoga classes.",
+    "imageSrc": "https://i.ibb.co/YfB3pwG/muscular-sportsman-building-biceps-with-dumbbell.jpg"
+  },
+  {
+    "id": 4,
+    "title": "HIIT Ignition",
+    "description": "Ignite your metabolism with High-Intensity Interval Training (HIIT).",
+    "imageSrc": "https://i.ibb.co/C8RFQkQ/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-h.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mindful Meditation",
+    "description": "Experience serenity through mindful meditation.",
+    "imageSrc": "https://i.ibb.co/TgXNRxX/young-fitness-man-studio.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Sculpt & Tone",
+    "description": "Define and sculpt your body with targeted exercises.",
+    "imageSrc": "https://i.ibb.co/bLCxnhJ/side-view-basketball-player-training.jpg"
+  }
+]
