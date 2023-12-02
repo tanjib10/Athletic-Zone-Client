@@ -27,12 +27,12 @@ const NewsletterSubscription = () => {
     setFormData({ name: "", email: "" });
   };
   return (
-    <section className="my-16 py-16 bg-gradient-to-r from-white to-[#F0ECE5]">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center text-[#161A30]">
+    <section className="my-16 py-16">
+      <div className="container p-10 shadow-xl bg-[#31304D] mx-auto">
+        <h2 className="text-4xl font-bold mb-8 text-center text-white">
           Subscribe to Our Newsletter
         </h2>
-        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-xl">
           <div className="mb-6">
             <label
               htmlFor="name"
