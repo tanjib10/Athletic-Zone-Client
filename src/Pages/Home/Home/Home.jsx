@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import Featured from "../Featured/Featured";
 import AboutUsSection from "../AboutUsSection/AboutUsSection";
 import TestimonialsSection from "../TestimonialsSection/TestimonialsSection";
+import FeaturedClassesSection from "../FeaturedClassesSection/FeaturedClassesSection";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <Featured></Featured>
       <AboutUsSection></AboutUsSection>
+      <FeaturedClassesSection></FeaturedClassesSection>
       <TestimonialsSection></TestimonialsSection>
     </div>
   );
