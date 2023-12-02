@@ -21,20 +21,20 @@ const LatestArticlesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#f5f5f5] to-[#ffffff]">
+    <section className="py-16 bg-gradient-to-r from-[#F0ECE5] to-[#ffffff]">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center text-[#161A30]">
           Latest Articles
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {latestArticles.map((article) => (
             <div
               key={article.id}
-              className="p-6 rounded-lg shadow-md hover:shadow-lg transition bg-[#31304D] text-white duration-300 transform hover:-translate-y-2"
+              className="p-6 rounded-lg shadow-md hover:shadow-lg transition bg-[#F0ECE5]  duration-300 transform hover:-translate-y-2"
             >
-              <h3 className="text-xl font-semibold mb-4">{article.title}</h3>
-              <p className="text-[#B6BBC4] mb-6">{article.excerpt}...</p>
+              <h3 className="text-xl  font-semibold mb-4">{article.title}</h3>
+              <p className="text-[#31304D] mb-6">{article.excerpt}...</p>
               <span className="text-blue-400 underline cursor-pointer">
                 Read more
               </span>
