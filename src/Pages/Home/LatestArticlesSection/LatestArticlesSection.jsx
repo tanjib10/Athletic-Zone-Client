@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LatestArticlesSection = () => {
   const latestArticles = [
     {
@@ -35,9 +37,11 @@ const LatestArticlesSection = () => {
             >
               <h3 className="text-xl  font-semibold mb-4">{article.title}</h3>
               <p className="text-[#31304D] mb-6">{article.excerpt}...</p>
-              <span className="text-blue-400 underline cursor-pointer">
-                Read more
-              </span>
+              <Link to="/">
+                <span className="text-blue-400 underline cursor-pointer">
+                  Read more
+                </span>
+              </Link>
             </div>
           ))}
         </div>

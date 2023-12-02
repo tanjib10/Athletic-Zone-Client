@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 const TeamSection = () => {
   const [teamMembers, setTeamMembers] = useState([]);
   useEffect(() => {
@@ -8,7 +7,7 @@ const TeamSection = () => {
       .then((data) => setTeamMembers(data));
   }, []);
   return (
-    <section className="py-16 my-16 bg-gradient-to-r from-[#f5f5f5] to-[#ffffff]">
+    <section className="py-16 my-16]">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center text-[#161A30]">
           Meet Our Team
