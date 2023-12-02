@@ -5,6 +5,9 @@ import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Gallery from "../Pages/Gallery/Gallery";
+// import TrainerSection from "../Pages/Trainers/Trainers";
+import Trainers from "../Pages/Trainers/Trainers";
+import TrainerDetails from "../Pages/Trainers/TrainerDetails";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +30,14 @@ export const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
+      },
+      {
+        path: "/trainer",
+        element: <Trainers></Trainers>,
+      },
+      {
+        path: "/trainer/:id",
+        element: <TrainerDetails></TrainerDetails>,
       },
     ],
   },
