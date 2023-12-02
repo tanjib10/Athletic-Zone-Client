@@ -9,6 +9,7 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Trainers from "../Pages/Trainers/Trainers";
 import TrainerDetails from "../Pages/Trainers/TrainerDetails";
 import BecomeTrainer from "../Pages/Trainers/BecomeTrainer";
+import Packages from "../Pages/Trainers/Packages";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: "/becomeTrainer",
         element: <BecomeTrainer></BecomeTrainer>,
+      },
+      {
+        path: "/user-booked/:id",
+        element: <Packages></Packages>,
       },
     ],
   },

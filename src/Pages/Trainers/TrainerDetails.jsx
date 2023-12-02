@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const TrainerDetails = () => {
   const { id } = useParams();
@@ -36,11 +36,13 @@ const TrainerDetails = () => {
     return (
       <div className="mt-8">
         <h3 className="text-2xl text-center font-bold mb-4">Available Slots</h3>
-        <div className="bg-gray-200 p-4 rounded-md">
-          <p className="text-center text-lg font-semibold text-blue-700">
-            {trainer.availableSlots}
-          </p>
-        </div>
+        <Link to={`/user-booked/${trainer._id}`}>
+          <div className="w-full btn bg-gray-200 rounded-md">
+            <button className="text-center text-lg font-semibold text-blue-700">
+              {trainer.availableSlots}
+            </button>
+          </div>
+        </Link>
       </div>
     );
   };
