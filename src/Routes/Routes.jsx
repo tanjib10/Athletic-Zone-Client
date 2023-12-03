@@ -17,6 +17,8 @@ import Dashboard from "../Layout/Dashboard";
 import Activity from "../Pages/Dashboard/Activity/Activity";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 import Recommended from "../Pages/Dashboard/Recommended/Recommended";
+import AllSubscribers from "../Pages/Dashboard/AllSubscribers/AllSubscribers";
+import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 
 export const router = createBrowserRouter([
   {
@@ -86,6 +88,14 @@ export const router = createBrowserRouter([
       {
         path: "recommended",
         element: <Recommended></Recommended>,
+      },
+      {
+        path: "subscribers",
+        element: <AllSubscribers></AllSubscribers>,
+      },
+      {
+        path: "trainers",
+        element: <AllTrainers></AllTrainers>,
       },
     ],
   },
