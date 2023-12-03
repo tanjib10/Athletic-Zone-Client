@@ -10,6 +10,7 @@ import Trainers from "../Pages/Trainers/Trainers";
 import TrainerDetails from "../Pages/Trainers/TrainerDetails";
 import BecomeTrainer from "../Pages/Trainers/BecomeTrainer";
 import Packages from "../Pages/Trainers/Packages";
+import Classes from "../Pages/Classes/Classes";
 
 export const router = createBrowserRouter([
   {
@@ -33,9 +34,14 @@ export const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery></Gallery>,
       },
+
       {
         path: "/trainer",
         element: <Trainers></Trainers>,
+      },
+      {
+        path: "/classes",
+        element: <Classes></Classes>,
       },
       {
         path: "/trainer/:id",
