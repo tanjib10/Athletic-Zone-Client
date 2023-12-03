@@ -69,7 +69,7 @@ const Trainers = () => {
         </p>
         <Link
           to="/becomeTrainer"
-          className="btn w-1/4  bg-[#F76D57] text-xl font-bold text-white  px-6 rounded-full hover:bg-[#B6BBC4] transition duration-300"
+          className="btn w-1/4 h-24  bg-[#F76D57] text-xl font-bold text-white  px-6 rounded-lg lg:rounded-full hover:bg-[#B6BBC4] transition duration-300"
         >
           Become a Trainer
         </Link>

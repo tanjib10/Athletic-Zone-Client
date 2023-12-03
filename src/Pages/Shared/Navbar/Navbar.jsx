@@ -76,6 +76,34 @@ const Navbar = () => {
           Classes
         </NavLink>
       </li>
+      <li className="pr-4">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl  underline"
+              : ""
+          }
+        >
+          Dashboard
+        </NavLink>
+      </li>
+      <li className="pr-4">
+        <NavLink
+          to="/forums"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl  underline"
+              : ""
+          }
+        >
+          Forums
+        </NavLink>
+      </li>
     </>
   );
   return (
@@ -104,11 +132,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost text-xl">
-            <img
-              className="w-4 lg:w-8"
-              src="../../../../public/28542127_7459344.jpg"
-              alt=""
-            />
+            <img className="w-4 lg:w-8" src="/28542127_7459344.jpg" alt="" />
             Athletic Zone
           </Link>
         </div>
