@@ -15,6 +15,7 @@ import ClassDetails from "../Pages/Classes/ClassDetails";
 import Forums from "../Pages/Forums/Forums";
 import Dashboard from "../Layout/Dashboard";
 import Activity from "../Pages/Dashboard/Activity/Activity";
+import Profile from "../Pages/Dashboard/Profile/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: "activity",
         element: <Activity></Activity>,
+      },
+      {
+        path: "profile",
+        element: <Profile></Profile>,
       },
     ],
   },
