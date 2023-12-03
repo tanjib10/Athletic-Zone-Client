@@ -27,7 +27,7 @@ const AllClasses = () => {
 
             <div className="flex justify-between items-center">
               <Link
-                to={`/class/${classItem._id}`}
+                to={`/classes/${classItem._id}`}
                 className="bg-indigo-500 text-white py-2 px-4 rounded-md inline-block hover:bg-indigo-600 transition duration-300"
                 style={{ backgroundColor: "#31304D" }}
               >
