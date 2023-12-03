@@ -46,7 +46,6 @@ const Register = () => {
               title: "Registration Successful",
               text: "You have been successfully registered!",
             });
-            navigate("/");
           }
         });
       })
@@ -61,6 +60,7 @@ const Register = () => {
     e.target.email.value = "";
     e.target.password.value = "";
     e.target.name.value = "";
+    navigate("/");
   };
   return (
     <div>
