@@ -49,8 +49,6 @@ const Forums = () => {
       );
 
       const result = await response.json();
-
-      // Update UI
       setPosts((prevPosts) =>
         prevPosts.map((post) =>
           post._id === postId

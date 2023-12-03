@@ -13,6 +13,8 @@ import Packages from "../Pages/Trainers/Packages";
 import Classes from "../Pages/Classes/Classes";
 import ClassDetails from "../Pages/Classes/ClassDetails";
 import Forums from "../Pages/Forums/Forums";
+import Dashboard from "../Layout/Dashboard";
+import Activity from "../Pages/Dashboard/Activity/Activity";
 
 export const router = createBrowserRouter([
   {
@@ -64,6 +66,16 @@ export const router = createBrowserRouter([
       {
         path: "/user-booked/:id",
         element: <Packages></Packages>,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "activity",
+        element: <Activity></Activity>,
       },
     ],
   },

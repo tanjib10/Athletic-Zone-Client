@@ -78,7 +78,7 @@ const Navbar = () => {
       </li>
       <li className="pr-4">
         <NavLink
-          to="/dashboard"
+          to="/dashboard/activity"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending text-xl"
