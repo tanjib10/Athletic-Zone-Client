@@ -16,6 +16,7 @@ import Forums from "../Pages/Forums/Forums";
 import Dashboard from "../Layout/Dashboard";
 import Activity from "../Pages/Dashboard/Activity/Activity";
 import Profile from "../Pages/Dashboard/Profile/Profile";
+import Recommended from "../Pages/Dashboard/Recommended/Recommended";
 
 export const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "recommended",
+        element: <Recommended></Recommended>,
       },
     ],
   },
