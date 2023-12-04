@@ -20,6 +20,7 @@ import Recommended from "../Pages/Dashboard/Recommended/Recommended";
 import AllSubscribers from "../Pages/Dashboard/AllSubscribers/AllSubscribers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainers from "../Pages/Dashboard/AppliedTrainers/AppliedTrainers";
+import ManageMembers from "../Pages/Dashboard/ManageMembers/ManageMembers";
 
 export const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ export const router = createBrowserRouter([
       {
         path: "appliedTrainers",
         element: <AppliedTrainers></AppliedTrainers>,
+      },
+      {
+        path: "members",
+        element: <ManageMembers></ManageMembers>,
       },
     ],
   },

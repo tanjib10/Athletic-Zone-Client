@@ -3,7 +3,6 @@ import {
   FaAddressBook,
   FaBahai,
   FaBolt,
-  FaBook,
   FaFileSignature,
   FaHome,
   FaMale,
@@ -22,37 +21,32 @@ const Dashboard = () => {
         <ul className=" font-semi-bold menu p-8">
           {isAdmin ? (
             <>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/appliedTrainers">
                   <FaAddressBook></FaAddressBook> Applied Trainers
                 </NavLink>
               </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/trainers">
                   <FaBolt></FaBolt> All Trainers
                 </NavLink>
               </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/subscribers">
                   <FaSubscript></FaSubscript> All Subscribers
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/dashboard/slots">
-                  <FaBook></FaBook> Manage Slots
-                </NavLink>
-              </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/members">
                   <FaMale></FaMale> Manage Members
                 </NavLink>
               </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/forums">
                   <FaPlus></FaPlus> Add New Forum
                 </NavLink>
               </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/classes">
                   <FaPlus></FaPlus> Add New Class
                 </NavLink>
@@ -60,17 +54,17 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/activity">
                   <FaFileSignature></FaFileSignature> Activity Log
                 </NavLink>
               </li>
-              <li className="">
+              <li className="mb-2">
                 <NavLink to="/dashboard/profile">
                   <CgProfile></CgProfile> Profile Settings
                 </NavLink>
               </li>
-              <li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/recommended">
                   <FaBahai></FaBahai> Recommended Classes
                 </NavLink>
@@ -78,7 +72,7 @@ const Dashboard = () => {
             </>
           )}
           <div className="divider"></div>
-          <li>
+          <li className="mb-2">
             <NavLink to="/">
               <FaHome></FaHome> Home
             </NavLink>
