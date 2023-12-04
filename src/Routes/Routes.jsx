@@ -21,6 +21,7 @@ import AllSubscribers from "../Pages/Dashboard/AllSubscribers/AllSubscribers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainers from "../Pages/Dashboard/AppliedTrainers/AppliedTrainers";
 import ManageMembers from "../Pages/Dashboard/ManageMembers/ManageMembers";
+import AddNewForum from "../Pages/Dashboard/AddNewForum/AddNewForum";
 
 export const router = createBrowserRouter([
   {
@@ -106,6 +107,10 @@ export const router = createBrowserRouter([
       {
         path: "members",
         element: <ManageMembers></ManageMembers>,
+      },
+      {
+        path: "forums",
+        element: <AddNewForum></AddNewForum>,
       },
     ],
   },
