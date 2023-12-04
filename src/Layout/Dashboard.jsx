@@ -31,6 +31,11 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li className="mb-2">
+                <NavLink to="/dashboard/classes">
+                  <FaPlus></FaPlus> Add New Class
+                </NavLink>
+              </li>
+              <li className="mb-2">
                 <NavLink to="/dashboard/subscribers">
                   <FaSubscript></FaSubscript> All Subscribers
                 </NavLink>
@@ -45,11 +50,7 @@ const Dashboard = () => {
                   <FaPlus></FaPlus> Add New Forum
                 </NavLink>
               </li>
-              <li className="mb-2">
-                <NavLink to="/dashboard/classes">
-                  <FaPlus></FaPlus> Add New Class
-                </NavLink>
-              </li>
+
               <li className="mb-2">
                 <NavLink to="/dashboard/appliedTrainers">
                   <FaAddressBook></FaAddressBook> Applied Trainers
