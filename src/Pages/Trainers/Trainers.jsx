@@ -1,6 +1,7 @@
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Trainers = () => {
   const [trainers, setTrainers] = useState([]);
@@ -21,6 +22,9 @@ const Trainers = () => {
 
   return (
     <section className="py-16 bg-gray-100">
+      <Helmet>
+        <title>Athletic Zone | Trainers</title>
+      </Helmet>
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center text-[#161A30]">
           Meet Our Trainers

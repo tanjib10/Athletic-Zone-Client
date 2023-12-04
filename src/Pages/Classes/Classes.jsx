@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import AllClasses from "./AllClasses";
 
 const Classes = () => {
@@ -34,6 +35,9 @@ const Classes = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Athletic Zone | Classes</title>
+      </Helmet>
       <div className="container mx-auto mt-8 p-4 lg:p-8">
         <section className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-3xl font-bold mb-4 text-indigo-700">

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ForumPost from "./ForumPost";
 import Pagination from "./Pagination";
+import { Helmet } from "react-helmet";
 
 const Forums = () => {
   const [posts, setPosts] = useState([]);
@@ -63,6 +64,9 @@ const Forums = () => {
 
   return (
     <div className="container mx-auto mt-8 p-4 lg:p-8">
+      <Helmet>
+        <title>Athletic Zone | Forums</title>
+      </Helmet>
       <h2 className="text-4xl font-bold mb-6 text-center text-[#31304D]">
         Recent Forums
       </h2>

@@ -11,11 +11,15 @@ import {
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
   return (
     <div className="flex">
+      <Helmet>
+        <title>Athletic Zone | Dashboard</title>
+      </Helmet>
       <div className="w-64 min-h-screen bg-[#B6BBC4]">
         <h3 className="text-center text-2xl mt-8 font-bold"> Dashboard</h3>
         <ul className=" font-semi-bold menu p-8">

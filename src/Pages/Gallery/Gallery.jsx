@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const Gallery = () => {
@@ -31,6 +32,9 @@ const Gallery = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
+      <Helmet>
+        <title>Athletic Zone | Gallery</title>
+      </Helmet>
       <div className="container mx-auto mt-8">
         <div className="bg-[#161A30] text-white text-center py-4 mb-8 rounded-md">
           <h1 className="text-4xl font-bold">Explore Our Gallery</h1>
