@@ -25,11 +25,7 @@ const Footer = () => {
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
         <aside className="items-center grid-flow-col">
-          <img
-            className="w-8 lg:w-16"
-            src="../../../../public/28542127_7459344.jpg"
-            alt=""
-          />
+          <img className="w-8 lg:w-16" src="/28542127_7459344.jpg" alt="" />
           <p className="text-2xl font-bold">Athletic Zone</p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
