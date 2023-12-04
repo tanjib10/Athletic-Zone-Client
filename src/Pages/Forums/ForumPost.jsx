@@ -12,13 +12,16 @@ const ForumPost = ({ post, onVote }) => {
       const newVoteType = votingState === voteType ? null : voteType;
       setVotingState(newVoteType);
       onVote(post._id, newVoteType);
-      await fetch(`http://localhost:5000/api/forum-posts/${post._Id}/vote`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ voteType: newVoteType }),
-      });
+      await fetch(
+        `https://athletic-zone-server.vercel.app/api/forum-posts/${post._Id}/vote`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ voteType: newVoteType }),
+        }
+      );
     } catch (error) {
       console.error("Error handling vote:", error);
     }

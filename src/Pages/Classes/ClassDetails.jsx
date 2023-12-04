@@ -6,7 +6,7 @@ const ClassDetails = () => {
   const [classItem, setClassItem] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/classes/${id}`)
+    fetch(`https://athletic-zone-server.vercel.app/classes/${id}`)
       .then((res) => res.json())
       .then((data) => setClassItem(data));
   }, [id]);

@@ -9,7 +9,9 @@ const Trainers = () => {
   useEffect(() => {
     const fetchTrainers = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/trainers");
+        const response = await fetch(
+          "https://athletic-zone-server.vercel.app/api/trainers"
+        );
         const data = await response.json();
         setTrainers(data);
       } catch (error) {

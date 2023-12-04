@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Pages/Shared/Provider/AuthProvider";
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://athletic-zone-server.vercel.app",
 });
 const useAxios = () => {
   const { logout } = useContext(AuthContext);

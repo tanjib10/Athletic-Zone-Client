@@ -26,11 +26,6 @@ const Dashboard = () => {
           {isAdmin ? (
             <>
               <li className="mb-2">
-                <NavLink to="/dashboard/appliedTrainers">
-                  <FaAddressBook></FaAddressBook> Applied Trainers
-                </NavLink>
-              </li>
-              <li className="mb-2">
                 <NavLink to="/dashboard/trainers">
                   <FaBolt></FaBolt> All Trainers
                 </NavLink>
@@ -53,6 +48,11 @@ const Dashboard = () => {
               <li className="mb-2">
                 <NavLink to="/dashboard/classes">
                   <FaPlus></FaPlus> Add New Class
+                </NavLink>
+              </li>
+              <li className="mb-2">
+                <NavLink to="/dashboard/appliedTrainers">
+                  <FaAddressBook></FaAddressBook> Applied Trainers
                 </NavLink>
               </li>
             </>

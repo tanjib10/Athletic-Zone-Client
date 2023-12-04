@@ -10,7 +10,9 @@ const Gallery = () => {
   const fetchImages = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/images?skip=${(page - 1) * 12}&limit=12`
+        `https://athletic-zone-server.vercel.app/api/images?skip=${
+          (page - 1) * 12
+        }&limit=12`
       );
       const newImages = await response.json();
 

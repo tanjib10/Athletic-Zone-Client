@@ -15,7 +15,7 @@ const Forums = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/forum-posts?page=${currentPage}`
+        `https://athletic-zone-server.vercel.app/api/forum-posts?page=${currentPage}`
       );
       const data = await response.json();
 
@@ -39,7 +39,7 @@ const Forums = () => {
   const handleVote = async (postId, voteType) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/forum-posts/${postId}/vote`,
+        `https://athletic-zone-server.vercel.app/api/forum-posts/${postId}/vote`,
         {
           method: "POST",
           headers: {

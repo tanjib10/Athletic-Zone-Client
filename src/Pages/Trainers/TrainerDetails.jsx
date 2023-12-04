@@ -11,7 +11,7 @@ const TrainerDetails = () => {
     const fetchTrainerDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/trainers/${id}`
+          `https://athletic-zone-server.vercel.app/api/trainers/${id}`
         );
         const data = await response.json();
         setTrainer(data);

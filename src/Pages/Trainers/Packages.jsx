@@ -17,7 +17,7 @@ const Packages = () => {
       trainerId: id,
     };
 
-    fetch("http://localhost:5000/booking", {
+    fetch("https://athletic-zone-server.vercel.app/booking", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

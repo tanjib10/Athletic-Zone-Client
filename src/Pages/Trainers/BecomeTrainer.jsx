@@ -25,22 +25,25 @@ const BecomeTrainer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/new/trainers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName,
-          email: user.email,
-          age,
-          profileImage,
-          skills,
-          availableTimeWeek,
-          availableTimeDay,
-          otherInfo,
-        }),
-      });
+      const response = await fetch(
+        "https://athletic-zone-server.vercel.app/api/new/trainers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            email: user.email,
+            age,
+            profileImage,
+            skills,
+            availableTimeWeek,
+            availableTimeDay,
+            otherInfo,
+          }),
+        }
+      );
 
       if (response.ok) {
         Swal.fire({

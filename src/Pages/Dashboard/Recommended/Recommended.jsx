@@ -5,7 +5,7 @@ const Recommended = () => {
   const [allClasses, setAllClasses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/classes")
+    fetch("https://athletic-zone-server.vercel.app/classes")
       .then((res) => res.json())
       .then((data) => setAllClasses(data));
   }, []);
