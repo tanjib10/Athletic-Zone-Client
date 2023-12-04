@@ -25,7 +25,7 @@ const AppliedTrainers = () => {
   const handleConfirm = async (trainerId) => {
     try {
       await axiosSecure.post(`/api/new/trainers/train/${trainerId}/confirm`);
-      refetch();
+      // refetch();
     } catch (error) {
       console.error("Error confirming trainer application:", error);
     }
@@ -66,7 +66,7 @@ const AppliedTrainers = () => {
                 <td>
                   <FaEye
                     onClick={() => openModal(trainer)}
-                    className="text-lg"
+                    className="text-lg cursor-pointer"
                   ></FaEye>
                 </td>
               </tr>

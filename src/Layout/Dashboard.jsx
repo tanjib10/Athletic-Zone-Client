@@ -11,9 +11,10 @@ import {
   FaSubscript,
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="flex">
       <div className="w-64 min-h-screen bg-[#B6BBC4]">
@@ -59,42 +60,6 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <li>
-                <NavLink to="/dashboard/appliedTrainers">
-                  <FaAddressBook></FaAddressBook> Applied Trainers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/trainers">
-                  <FaBolt></FaBolt> All Trainers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/subscribers">
-                  <FaSubscript></FaSubscript> All Subscribers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/slots">
-                  <FaBook></FaBook> Manage Slots
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/members">
-                  <FaMale></FaMale> Manage Members
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/forums">
-                  <FaPlus></FaPlus> Add New Forum
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/classes">
-                  <FaPlus></FaPlus> Add New Class
-                </NavLink>
-              </li>
-
               <li>
                 <NavLink to="/dashboard/activity">
                   <FaFileSignature></FaFileSignature> Activity Log
