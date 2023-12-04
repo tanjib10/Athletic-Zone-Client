@@ -22,6 +22,7 @@ import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainers from "../Pages/Dashboard/AppliedTrainers/AppliedTrainers";
 import ManageMembers from "../Pages/Dashboard/ManageMembers/ManageMembers";
 import AddNewForum from "../Pages/Dashboard/AddNewForum/AddNewForum";
+import AddNewClass from "../Pages/Dashboard/AddNewClass/AddNewClass";
 
 export const router = createBrowserRouter([
   {
@@ -111,6 +112,10 @@ export const router = createBrowserRouter([
       {
         path: "forums",
         element: <AddNewForum></AddNewForum>,
+      },
+      {
+        path: "classes",
+        element: <AddNewClass></AddNewClass>,
       },
     ],
   },

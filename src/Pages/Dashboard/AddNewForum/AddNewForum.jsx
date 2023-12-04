@@ -52,7 +52,7 @@ const AddNewForum = () => {
 
   return (
     <div className="container mx-auto my-12 p-16">
-      <h2 className="text-2xl font-bold mb-4">Add New Forum</h2>
+      <h2 className="text-2xl font-bold mb-8">Add New Forum</h2>
 
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
