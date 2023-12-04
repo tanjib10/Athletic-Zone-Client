@@ -37,7 +37,7 @@ const LatestArticlesSection = () => {
             >
               <h3 className="text-xl  font-semibold mb-4">{article.title}</h3>
               <p className="text-[#31304D] mb-6">{article.excerpt}...</p>
-              <Link to="/">
+              <Link to="/forums">
                 <span className="text-blue-400 underline cursor-pointer">
                   Read more
                 </span>

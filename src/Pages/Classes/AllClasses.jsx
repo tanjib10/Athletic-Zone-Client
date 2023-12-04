@@ -20,7 +20,7 @@ const AllClasses = () => {
             key={classItem._id}
             className="bg-white rounded-lg w-80 shadow-md p-6"
           >
-            <h3 className="text-xl font-bold mb-2 text-indigo-700">
+            <h3 className="text-xl font-bold mb-2 text-black">
               {classItem.name}
             </h3>
             <p className="text-gray-600 mb-4">{classItem.description}</p>
@@ -36,8 +36,7 @@ const AllClasses = () => {
 
               <Link
                 to="/trainer"
-                className="btn bg-[#B6BBC4] text-center"
-                style={{ color: "#31304D" }}
+                className="btn text-white bg-[#B6BBC4] text-center"
               >
                 Join Now
               </Link>

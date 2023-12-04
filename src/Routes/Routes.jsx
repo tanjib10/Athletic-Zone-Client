@@ -23,6 +23,7 @@ import AppliedTrainers from "../Pages/Dashboard/AppliedTrainers/AppliedTrainers"
 import ManageMembers from "../Pages/Dashboard/ManageMembers/ManageMembers";
 import AddNewForum from "../Pages/Dashboard/AddNewForum/AddNewForum";
 import AddNewClass from "../Pages/Dashboard/AddNewClass/AddNewClass";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -69,53 +70,101 @@ export const router = createBrowserRouter([
       },
       {
         path: "/becomeTrainer",
-        element: <BecomeTrainer></BecomeTrainer>,
+        element: (
+          <PrivateRoute>
+            <BecomeTrainer></BecomeTrainer>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/user-booked/:id",
-        element: <Packages></Packages>,
+        element: (
+          <PrivateRoute>
+            <Packages></Packages>
+          </PrivateRoute>
+        ),
       },
     ],
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "activity",
-        element: <Activity></Activity>,
+        element: (
+          <PrivateRoute>
+            <Activity></Activity>
+          </PrivateRoute>
+        ),
       },
       {
         path: "profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "recommended",
-        element: <Recommended></Recommended>,
+        element: (
+          <PrivateRoute>
+            <Recommended></Recommended>
+          </PrivateRoute>
+        ),
       },
       {
         path: "subscribers",
-        element: <AllSubscribers></AllSubscribers>,
+        element: (
+          <PrivateRoute>
+            <AllSubscribers></AllSubscribers>
+          </PrivateRoute>
+        ),
       },
       {
         path: "trainers",
-        element: <AllTrainers></AllTrainers>,
+        element: (
+          <PrivateRoute>
+            <AllTrainers></AllTrainers>
+          </PrivateRoute>
+        ),
       },
       {
         path: "appliedTrainers",
-        element: <AppliedTrainers></AppliedTrainers>,
+        element: (
+          <PrivateRoute>
+            <AppliedTrainers></AppliedTrainers>
+          </PrivateRoute>
+        ),
       },
       {
         path: "members",
-        element: <ManageMembers></ManageMembers>,
+        element: (
+          <PrivateRoute>
+            <ManageMembers></ManageMembers>
+          </PrivateRoute>
+        ),
       },
       {
         path: "forums",
-        element: <AddNewForum></AddNewForum>,
+        element: (
+          <PrivateRoute>
+            <AddNewForum></AddNewForum>
+          </PrivateRoute>
+        ),
       },
       {
         path: "classes",
-        element: <AddNewClass></AddNewClass>,
+        element: (
+          <PrivateRoute>
+            <AddNewClass></AddNewClass>
+          </PrivateRoute>
+        ),
       },
     ],
   },

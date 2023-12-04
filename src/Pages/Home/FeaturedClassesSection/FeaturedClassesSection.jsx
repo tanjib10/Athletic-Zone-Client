@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FeaturedClassesSection = () => {
   const featuredClasses = [
     {
@@ -55,12 +57,12 @@ const FeaturedClassesSection = () => {
                 {featuredClass.title}
               </h3>
               <p className="text-gray-700 mb-6">{featuredClass.description}</p>
-              <a
-                href="/"
+              <Link
+                to="/classes"
                 className="text-blue-500 hover:underline transition duration-300"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           ))}
         </div>
