@@ -6,6 +6,7 @@ import FeaturedClassesSection from "../FeaturedClassesSection/FeaturedClassesSec
 import LatestArticlesSection from "../LatestArticlesSection/LatestArticlesSection";
 import NewsletterSubscription from "../NewsletterSubscription/NewsletterSubscription";
 import TeamSection from "../TeamSection/TeamSection";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Helmet>
         <title>Athletic Zone | Home</title>
       </Helmet>
+      <Banner></Banner>
       <Featured></Featured>
       <AboutUsSection></AboutUsSection>
       <FeaturedClassesSection></FeaturedClassesSection>
