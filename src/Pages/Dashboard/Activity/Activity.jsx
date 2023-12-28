@@ -24,7 +24,9 @@ const Activity = () => {
         <div className="mb-4">
           <img src={user.photoURL} alt="" />
           <h4 className="text-lg font-bold mb-2">Personal Information:</h4>
-          <p>Name: {user.displayName}</p>
+          <p>
+            <strong>Name:</strong> {user.displayName}
+          </p>
           <p>
             <strong>Member id:</strong> {user.uid}
           </p>
