@@ -8,7 +8,7 @@ const Activity = () => {
   // useEffect(() => {
   //   fetch("https://athletic-zone-server.vercel.app/users")
   //     .then((res) => res.json())
-  //     .then((data) => setUser(data));
+  //     .then((data) =>n setUser(data));
   //
   // }, []);
   console.log(user);
@@ -22,8 +22,9 @@ const Activity = () => {
         </h3>
 
         <div className="mb-4">
+          <img src={user.photoURL} alt="" />
           <h4 className="text-lg font-bold mb-2">Personal Information:</h4>
-          <p>Name: {user.name}</p>
+          <p>Name: {user.displayName}</p>
           <p>
             <strong>Member id:</strong> {user.uid}
           </p>
