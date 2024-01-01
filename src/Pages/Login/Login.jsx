@@ -82,6 +82,10 @@ const Login = () => {
           <div className="card w-3/6 shadow-xl bg-base-100">
             <form onSubmit={handleLogIn} className="card-body">
               <div className="form-control">
+                <h3 className="text-lg my-3">
+                  <span className="font-bold">Note:</span> For admin role use
+                  this account and password below admin@admin.com <br /> 12345A!
+                </h3>
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
