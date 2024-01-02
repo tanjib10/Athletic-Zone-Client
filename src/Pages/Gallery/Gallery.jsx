@@ -33,11 +33,11 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className=" min-h-screen">
       <Helmet>
         <title>Athletic Zone | Gallery</title>
       </Helmet>
-      <div className="container mx-auto mt-8">
+      <div className="container mx-auto">
         <div className="bg-[#161A30] text-white text-center py-4 mb-8 rounded-md">
           <h1 className="text-4xl font-bold">Explore Our Gallery</h1>
         </div>
@@ -54,12 +54,12 @@ const Gallery = () => {
             {images.map((image) => (
               <div
                 key={image._id}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition duration-300"
+                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
               >
                 <img
                   src={image.image}
                   alt={`Image ${image._id}`}
-                  className="w-full h-48 object-cover rounded-md"
+                  className="w-full h-48 object-cover rounded-md transition duration-300 transform hover:scale-105"
                 />
               </div>
             ))}
